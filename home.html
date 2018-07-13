@@ -36,9 +36,18 @@
     <hr>
     <div id="table" class='table-responsive'></div>
   </div>
+  <footer class="footer bg-secondary py-4">
+    <div class="container">
+      <span class="text-light">Syahnur Nizam &copy;
+        <span id='yearNow'></span>
+      </span>
+    </div>
+  </footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script>
     $(() => {
+      let yearNow = (new Date()).getFullYear();
+      $("#yearNow").html(yearNow);
       $("body").on('click', '#calculate', function (e) {
         let redeposit = false;
         if ($("#redeposit").is(":checked")) {
